@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="account_move_picking" model="ir.ui.view">
+            <field name="name">account.move.picking</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"></field>
+	    <field name="arch" type="xml">
+		    <field name="state" position="before">
+			    <button name="create_picking" string="Crear Remito" type="object" />
+		    </field>
+		    <field name="invoice_origin" position="after">
+			    <field name="picking_id" readonly="1" />
+		    </field>
+	    </field>
+	</record>
+
+</odoo>
